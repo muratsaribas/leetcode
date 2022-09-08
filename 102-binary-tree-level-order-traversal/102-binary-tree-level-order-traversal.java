@@ -23,13 +23,11 @@ class Solution {
     
     public static void helper(TreeNode node, int depth, List<List<Integer>> res){
         if(node == null) return;
-        if(node != null){
-            if(res.size() < depth + 1)
-                res.add(new ArrayList<>());
-            res.get(depth).add(node.val);
-        }
 
-        
+        if(res.size() < depth + 1)
+            res.add(new ArrayList<>());
+        res.get(depth).add(node.val);
+
         if (node.left != null)
             helper(node.left, depth + 1, res);
         if (node.right != null)
