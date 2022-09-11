@@ -2,9 +2,11 @@ class Solution {
         
     public int[] twoSum(int[] numbers, int target) {
         
-        for(int i=0; i<numbers.length; i++){
+        for(int i=0; i<numbers.length-1; i++){
+            
             int low = i + 1;
             int high = numbers.length - 1;
+            
             while (low <= high) {
 
               int mid = low + (high - low) / 2;
